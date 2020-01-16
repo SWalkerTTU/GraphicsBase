@@ -15,10 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/*
- * This file is the panel in which your graphics are drawn. Do not modify it, except
- * for setting externalClass to your class name as packagename.classname.class; doing
- * otherwise could yield unpredictable results, though most predictably it would keep
+ /*
+ * This file is the panel in which your graphics are drawn. Do not modify it; doing
+ * so could yield unpredictable results, though most predictably it would keep
  * the program from working.
  * 
  * This class uses reflection to access a method called "paint" in your graphics
@@ -40,13 +39,17 @@ import java.util.logging.Logger;
  */
 public class GraphicsPanel extends javax.swing.JPanel {
 
-    //Your class name goes here, as packagename.classname.class
-    Class externalClass = randomDice.RandomDice.class;
-    
+    Class externalClass;
+
     /**
      * Creates new form GraphicsPanel
      */
     public GraphicsPanel() {
+        try {
+            externalClass = Class.forName(System.getProperty("externalClass"));
+        } catch (ClassNotFoundException ex) {
+            externalClass = null;
+        }
         initComponents();
     }
 
@@ -86,7 +89,7 @@ public class GraphicsPanel extends javax.swing.JPanel {
         Method[] externalMethods = externalClass.getMethods();
         Method externalPaint = Arrays.stream(externalMethods)
                 .filter(m -> "paint".equals(m.getName())).findFirst().get();
-               
+
         Object target = null;
         try {
             target = externalClass.getDeclaredConstructor((Class[]) null).newInstance((Object[]) null);
