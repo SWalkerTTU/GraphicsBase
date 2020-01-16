@@ -17,10 +17,9 @@
 
 /*
  * This file is the panel in which your graphics are drawn. Do not modify it, except
- * for importing your class as packagename.classname at the end of the imports,
- * and setting externalClass to your class name as classname.class; doing otherwise
- * could yield unpredictable results, though most predictably would keep the program
- * from working.
+ * for setting externalClass to your class name as packagename.classname.class; doing
+ * otherwise could yield unpredictable results, though most predictably it would keep
+ * the program from working.
  * 
  * This class uses reflection to access a method called "paint" in your graphics
  * class. This method must have exactly one parameter, a java.awt.Graphics
@@ -34,7 +33,6 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import randomDice.randomDice;
 
 /**
  *
@@ -42,8 +40,8 @@ import randomDice.randomDice;
  */
 public class GraphicsPanel extends javax.swing.JPanel {
 
-    //Your class name also goes here, as classname.class
-    Class externalClass = randomDice.class;
+    //Your class name also goes here, as packagename.classname.class
+    Class externalClass = randomDice.RandomDice.class;
     
     /**
      * Creates new form GraphicsPanel
