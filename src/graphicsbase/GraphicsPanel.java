@@ -1,14 +1,31 @@
-/*
-This file is the panel in which your graphics are drawn. Do not modify it, except
-for importing your class as packagename.classname at the end of the imports,
-and setting externalClass to your class name as classname.class; doing otherwise
-could yield unpredictable results, though most predictably would keep the program
-from working.
+/* 
+ * Copyright (C) 2020 Scott Walker
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
-This class uses reflection to access a method called "paint" in your graphics
-class. This method must have exactly one parameter, a java.awt.Graphics
-object which receives the graphics context from this JPanel.
-*/
+/*
+ * This file is the panel in which your graphics are drawn. Do not modify it, except
+ * for importing your class as packagename.classname at the end of the imports,
+ * and setting externalClass to your class name as classname.class; doing otherwise
+ * could yield unpredictable results, though most predictably would keep the program
+ * from working.
+ * 
+ * This class uses reflection to access a method called "paint" in your graphics
+ * class. This method must have exactly one parameter, a java.awt.Graphics
+ * object which receives the graphics context from this JPanel.
+ */
 package graphicsbase;
 
 import java.awt.Graphics;
