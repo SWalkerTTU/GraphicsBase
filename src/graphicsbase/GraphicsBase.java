@@ -107,10 +107,8 @@ public class GraphicsBase extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GraphicsBase().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new GraphicsBase().setVisible(true);
         });
     }
 
