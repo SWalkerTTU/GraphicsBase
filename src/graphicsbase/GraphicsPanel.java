@@ -40,7 +40,7 @@ import java.util.logging.Logger;
  */
 public class GraphicsPanel extends javax.swing.JPanel {
 
-    //Your class name also goes here, as packagename.classname.class
+    //Your class name goes here, as packagename.classname.class
     Class externalClass = randomDice.RandomDice.class;
     
     /**
